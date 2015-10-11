@@ -140,7 +140,7 @@ $(function() {
         it('should be different from the previous one', function(done) {
             var newEntries = $('.feed').html();
 
-            expect(previousEntries == newEntries).toBe(false);
+            expect(previousEntries === newEntries).toBe(false);
 
             loadFeed(0);    // Set the feed to be the initial one
 
