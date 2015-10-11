@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project shows how my ability to write specifications for a red-green-refactor process for this project. The application in this project is a web-based application that reads RSS feeds.
+This project shows my ability to write specifications for a red-green-refactor process for this project. The application in this project is a web-based application that reads RSS feeds.
 
 
 ## Steps to Complete The Project
