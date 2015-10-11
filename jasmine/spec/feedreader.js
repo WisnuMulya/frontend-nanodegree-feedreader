@@ -125,9 +125,24 @@ $(function() {
      * selection.
      */
     describe('New Feed Selection', function() {
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
+        var previousEntries;
+
+        beforeEach(function(done) {
+            previousEntries = $('.feed').html();
+
+            loadFeed(1, done);
+        });
+
+
+        /* This test makes sure when a new feed is loaded by the
+         * loadFeed function that the content actually changes.
          */
+        it('should be different from the previous one', function(done) {
+            var newEntries = $('.feed').html();
+
+            expect(previousEntries == newEntries).toBe(false);
+
+            done();
+        });
     });
 }());
