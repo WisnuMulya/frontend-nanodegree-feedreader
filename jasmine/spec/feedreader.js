@@ -64,11 +64,39 @@ $(function() {
             expect(bodyWithHiddenMenu.length).not.toBe(0);
         });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
+
+        /* This suite contains a set of related tests about the menu
+         * icon when clicked.
+         */
+        describe('when clicked', function() {
+            var menuIcon,
+                bodyElem;
+
+            beforeEach(function() {
+                menuIcon = document.getElementsByClassName('menu-icon-link')[0];
+                bodyElem = document.getElementsByTagName('body')[0];
+            });
+
+
+            /* This test makes sure that when the menu is hidden and the
+             * menu icon is clicked, the menu will be shown.
+             */
+            it('should display the menu', function() {
+                menuIcon.click();
+
+                expect(bodyElem.classList.contains('menu-hidden')).toBe(false);
+            });
+
+            /* This test makes sure that when the menu is shown and the
+             * menu icon is clicked, the menu will be hidden.
+             */
+            it('should hide the menu', function() {
+                bodyElem.classList.remove('menu-hidden');
+                menuIcon.click();
+
+                expect(bodyElem.classList.contains('menu-hidden')).toBe(true);
+            });
+        });
     });
 
 
