@@ -20,3 +20,4 @@ This project shows how my ability to write specifications for a red-green-refact
 
 * [Jasmine 2.2 Documentation](http://jasmine.github.io/2.2/introduction.html)
 * Inspiration for testing click event from [this post](https://discussions.udacity.com/t/how-can-i-test-click-events/24556) in the discussion forum.
+* Inspiration for specs name from [this officehour](https://www.youtube.com/watch?v=dEikwrjQPGo).
