@@ -120,10 +120,14 @@ $(function() {
         });
     });
 
-    /* TODO: Write a new test suite named "New Feed Selection"
 
+    /* This suite contains a set of related test about the new feed
+     * selection.
+     */
+    describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
 }());
