@@ -147,4 +147,33 @@ $(function() {
             done();
         });
     });
+
+
+    /* This suite contains a set of tests about error handlers.
+     */
+    describe('Error Handlers', function() {
+        var feedBeforeError;
+
+        beforeEach(function(done) {
+            setTimeout(function() { // Timeout is set to avoid confliction with other asynchronous spec test
+                feedBeforeError = $('.feed').html();
+
+                // Create error on new feed selection
+                allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=asdf'
+                loadFeed(0, done);
+            }, 1000);
+        });
+
+        it('should be called when new feed selection fails', function(done) {
+            var feedAfterError = $('.feed').html();
+
+            expect(feedBeforeError === feedAfterError).toBe(false);
+
+            // Set the feed to be the initial one
+            allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=rss';
+            loadFeed(0);
+
+            done()
+        });
+    });
 }());
