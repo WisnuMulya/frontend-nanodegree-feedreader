@@ -142,6 +142,8 @@ $(function() {
 
             expect(previousEntries == newEntries).toBe(false);
 
+            loadFeed(0);    // Set the feed to be the initial one
+
             done();
         });
     });
