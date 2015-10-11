@@ -15,6 +15,7 @@ This project shows my ability to write specifications for a red-green-refactor p
 5. Write a spec to ensure there is at least one entry when loadFeed is called.
 6. Write a spec to ensure that new feed selection actually changes when loadFeed is called.
 7. (Additional) Write a spec to ensure there is an error handler when calling loadFeed for new feed selection fails.
+8. (Additional) Write an error handler for loadFeed function.
 
 ## Resources
 
