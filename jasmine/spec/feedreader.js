@@ -104,12 +104,20 @@ $(function() {
      * initial entries.
      */
     describe('Initial Entries', function() {
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
+
+
+        /* This test makes sure that when loadFeed function is called in
+         * initial page load with the function init, there is at least
          * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test wil require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        it('has added entries', function(done) {
+            expect($('.feed').children().length).not.toBe(0);
+
+            done();
+        });
     });
 
     /* TODO: Write a new test suite named "New Feed Selection"
