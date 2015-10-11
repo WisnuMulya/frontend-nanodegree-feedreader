@@ -72,6 +72,8 @@ function loadFeed(id, cb) {
             entries.forEach(function(entry) {
                 container.append(entryTemplate(entry));
             });
+        } else {    // Set event handler
+            $('.feed').html('Feeds could not be loaded');
         }
 
         if (cb) {
