@@ -1,6 +1,14 @@
 # Frontend Nanodegree Feedreader Test
 
 
+## Getting Started
+To run this app, you first need to clone this repo to your local machine by running the following lines in your terminal and inside the directory where you want to put this app in:
+```bash
+$> git clone git@github.com:WisnuMulya/frontend-nanodegree-feedreader.git
+```
+After having this app in your local machine, go to the root directory of this app and open index.html in your browser. It should shows the feedreader app on the top and the Jasmine test html below the feedreader.
+
+
 ## Overview
 
 This project shows my ability to write specifications for a red-green-refactor process for this project. The application in this project is a web-based application that reads RSS feeds.
