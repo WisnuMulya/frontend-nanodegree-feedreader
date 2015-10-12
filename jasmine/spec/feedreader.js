@@ -155,11 +155,12 @@ $(function() {
         var feedBeforeError;
 
         beforeEach(function(done) {
-            setTimeout(function() { // Timeout is set to avoid confliction with other asynchronous spec test
+            // Timeout is set to avoid confliction with other asynchronous spec test
+            setTimeout(function() {
                 feedBeforeError = $('.feed').html();
 
                 // Create error on new feed selection
-                allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=asdf'
+                allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=asdf';
                 loadFeed(0, done);
             }, 1000);
         });
@@ -173,7 +174,7 @@ $(function() {
             allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=rss';
             loadFeed(0);
 
-            done()
+            done();
         });
     });
 }());
