@@ -91,7 +91,6 @@ $(function() {
              * menu icon is clicked, the menu will be hidden.
              */
             it('should hide the menu', function() {
-                bodyElem.classList.remove('menu-hidden');
                 menuIcon.click();
 
                 expect(bodyElem.classList.contains('menu-hidden')).toBe(true);
