@@ -33,7 +33,7 @@ $(function() {
         it('should have a defined URL', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
-                expect(feed.url.length > 0).not.toBe(false);
+                expect(feed.url.length).toBeGreaterThan(0);
             });
         });
 
@@ -44,7 +44,7 @@ $(function() {
         it('should have a defined name', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
-                expect(feed.name.length > 0).not.toBe(false);
+                expect(feed.name.length).toBeGreaterThan(0);
             });
         });
     });
@@ -113,7 +113,7 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         it('has added entries', function(done) {
-            expect($('.feed').children().length > 0).not.toBe(false);
+            expect($('.feed').children().length).toBeGreaterThan(0);
 
             done();
         });
