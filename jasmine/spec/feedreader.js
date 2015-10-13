@@ -170,9 +170,7 @@ $(function() {
 
             // Set the feed to be the initial one
             allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=rss';
-            loadFeed(0);
-
-            done();
+            loadFeed(0, done);
         });
     });
 }());
