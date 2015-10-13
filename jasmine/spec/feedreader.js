@@ -127,9 +127,13 @@ $(function() {
         var previousEntries;
 
         beforeEach(function(done) {
-            previousEntries = $('.feed').html();
+            // Emptying feed to avoid external influence from the previous test
+            $('.feed').empty();
 
-            loadFeed(1, done);
+            loadFeed(0, function() {
+                previousEntries = $('.feed').html();
+                loadFeed(1, done);
+            });
         });
 
 
