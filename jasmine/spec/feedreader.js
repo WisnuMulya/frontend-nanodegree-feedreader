@@ -113,7 +113,7 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         it('has added entries', function(done) {
-            expect($('.feed').children().length).not.toBe(0);
+            expect($('.feed').children().length > 0).not.toBe(false);
 
             done();
         });
