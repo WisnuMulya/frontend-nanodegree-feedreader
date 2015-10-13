@@ -152,14 +152,11 @@ $(function() {
         var feedBeforeError;
 
         beforeEach(function(done) {
-            // Timeout is set to avoid confliction with other asynchronous spec test
-            setTimeout(function() {
-                feedBeforeError = $('.feed').html();
+            feedBeforeError = $('.feed').html();
 
-                // Create error on new feed selection
-                allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=asdf';
-                loadFeed(0, done);
-            }, 1000);
+            // Create error on new feed selection
+            allFeeds[0].url = 'http://blog.udacity.com/feeds/posts/default?alt=asdf';
+            loadFeed(0, done);
         });
 
         it('should be called when new feed selection fails', function(done) {
